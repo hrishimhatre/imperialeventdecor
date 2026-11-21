@@ -12,6 +12,92 @@ body {
     color: #141E30
 }
 
+
+/* Welcome / Hero Section */
+.welcome-section {
+    position: relative;
+    width: 100%;
+    min-height: 430px;
+    padding: 100px 40px 60px;
+    box-sizing: border-box;
+    text-align: center;
+
+    /* Premium background */
+    background:
+        linear-gradient(
+            rgba(35, 24, 30, 0.48),
+            rgba(35, 24, 30, 0.48)
+        ),
+        url('./image/Event_bg.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Logo Top Left */
+.section-logo {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Main Heading */
+.welcome-section h1 {
+    color: #FFFFFF;
+    font-family: 'Georgia', serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 3px 8px rgba(0,0,0,0.9);
+    margin-bottom: 25px;
+}
+
+/* Paragraph */
+.welcome-section p {
+    color: #FFFFFF;
+    font-family: 'Georgia', serif;
+    font-size: 21px;
+    line-height: 1.7;
+    font-weight: 500;
+    max-width: 1100px;
+    margin: 15px auto;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .welcome-section {
+        padding: 120px 15px 40px; 
+        min-height: 450px;
+    }
+
+    .section-logo {
+        width: 100px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+
+
+
+
+
 /* Website Header */
 
 header {
@@ -40,7 +126,7 @@ nav a {
         rgba(4, 125, 195, 0.55),
         rgba(3, 24, 57, 0.55)
     ),
-    url("images/banner.jpg");
+    url("./image/banner.webp");
 
     background-size: cover;
     background-position: center;
@@ -52,27 +138,58 @@ nav a {
 
 
 #home h1 {
-    font-size: 50px;
+   /* Main Heading */
+ 
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 3px 3px 7px rgba(0, 127, 159, 0.85);
     margin-bottom: 20px;
-
-    color: #d1c300;
-
-    /* Text Outline */
-    -webkit-text-stroke: 1.8px #ac7d2a;
-
-    /* Text Shadow */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.5px;
 }
 
-#home p {
-    font-size: 16px;
-    margin-bottom: 32px;
-     /* Text Outline */
-    -webkit-text-stroke: 1.0px #380049;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 30px;
+        padding: 0 12px;
+    }
 
-    /* Text Shadow */
-    text-shadow: 3px 3px 5px rgba(73, 73, 73, 0.6);
 }
+
+
+
+    .hero-subtitle {
+    color: #FFFFFF;
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+
+    /* Premium text visibility */
+    text-shadow: 2px 2px 6px rgba(0, 127, 159, 0.85);
+
+    /* Spacing */
+    padding: 12px 20px;
+    margin: 20px auto;
+
+    display: inline-block;
+    max-width: 90%;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 16px;
+        padding: 8px 12px;
+        max-width: 95%;
+        line-height: 1.4;
+    }
+}
+
 
 #home a {
     display: inline-block;
@@ -96,6 +213,358 @@ section h2 {
     margin-bottom: 25px;
 }
 
+
+/* SERVICES SECTION */
+.services-section {
+    padding: 80px 6%;
+    background: #FAF6F1;
+    text-align: center;
+}
+
+/* SECTION HEADING */
+.section-heading span {
+    color: #C39445;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: #38242D;
+    font-family: 'Georgia', serif;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #6B5A60;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+/* SERVICE GRID */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* SERVICE CARDS */
+.service-card {
+    background: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #E9DCCB;
+    box-shadow: 0 5px 18px rgba(60, 35, 40, 0.07);
+    transition: all 0.3s ease;
+}
+
+/* SERVICE TITLE */
+.service-card h3 {
+    color: #38242D;
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* SERVICE DESCRIPTION */
+.service-card p {
+    color: #71636A;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* HOVER EFFECT */
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #C39445;
+    box-shadow: 0 12px 25px rgba(60, 35, 40, 0.13);
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+/* @media (max-width: 600px) {
+    .services-section {
+        padding: 55px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 28px 20px;
+    }
+} */
+
+/* TABLET RESPONSIVE */
+/* HEADER */
+header {
+    width: 100%;
+    background: #fff;
+    padding: 15px 5%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BRAND */
+header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+/* LOGO */
+.section-logo {
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* NAVIGATION */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #c08a45;
+}
+
+/* HAMBURGER BUTTON - HIDDEN ON DESKTOP */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #222;
+}
+
+/* TABLET + MOBILE */
+@media (max-width: 1024px) {
+
+    .header-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    .section-logo {
+        width: 48px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    /* Show Hamburger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hidden Menu Initially */
+    header nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        width: 100%;
+
+        background: #ffffff;
+        padding: 25px 0;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+    }
+
+    /* Show Menu When Active */
+    header nav.active {
+        display: flex;
+    }
+
+    header nav a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+
+/* TABLET & MOBILE HEADER */
+@media (max-width: 1024px) {
+
+    header {
+        width: 100%;
+        padding: 10px 18px;
+        background: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .header-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        gap: 10px;
+    }
+
+    /* COMPANY NAME + LOGO */
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .brand h2 {
+        margin: 0;
+        font-size: 23px;
+        white-space: nowrap;
+        line-height: 1.2;
+    }
+
+    .section-logo {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    /* HAMBURGER */
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+        background: transparent;
+        border: none;
+        font-size: 30px;
+        line-height: 1;
+        padding: 5px;
+        margin-left: auto;
+        cursor: pointer;
+        color: #222;
+    }
+
+    /* DROPDOWN NAV */
+    header nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 13px 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+}
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px 14px;
+    }
+
+    .brand {
+        gap: 5px;
+    }
+
+    .brand h2 {
+        font-size: 19px;
+    }
+
+    .section-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle {
+        font-size: 27px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 360px) {
+
+    .brand h2 {
+        font-size: 17px;
+    }
+
+    .section-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+}
+
+
 /* Footer */
 
 footer {
@@ -106,7 +575,7 @@ footer {
 }
 
 #home {
-    background-image: url("image/Banner.jpg");
+    background-image: url("./image/banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -188,7 +657,32 @@ footer {
 
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
+
     }
+    .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: auto;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.brand .section-logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0;
+    position: static;
+    flex-shrink: 0;
+}
 
 }
 
@@ -454,3 +948,62 @@ footer {
 
 
 
+/* VIDEO GALLERY SECTION */
+
+.video-gallery {
+    width: 100%;
+    padding: 60px 5%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.video-gallery h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.video-gallery p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* VIDEO GRID */
+
+.video-decor-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* VIDEO CARD */
+
+.video-card {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* VIDEO PLAYER */
+
+.video-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #000;
+}
